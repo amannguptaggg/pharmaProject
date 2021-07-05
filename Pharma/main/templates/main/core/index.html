@@ -1,0 +1,37 @@
+
+{% extends 'main/core/base.html' %}
+
+
+{% block content  %}
+
+  <h2 class="text-center mt-3">Welcome to Pharma</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>All Users</h3>
+      <div class="card-deck">
+      {% if allUsers %}
+      {% for users in allUsers %}
+      <div class="card m-2" style="max-width: 20rem;">
+        <div class="card-header bg-dark text-white">
+          {{users.first_name}} {{users.second_name}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Gender - {{users.get_gender_display}}</li>
+          <li class="list-group-item">Email - {{users.email}}</li>
+          <li class="list-group-item">Username - {{users.username}}</li>
+          <li class="list-group-item">Mobile - {{users.phone_number}}</li>
+          <li class="list-group-item">Qualification - {{users.get_qualification_display}}</li>
+          <li class="list-group-item">Date of birth - {{users.date_of_Birth}}</li>
+        </ul>
+      </div>
+
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+
+
+{% endblock content  %}

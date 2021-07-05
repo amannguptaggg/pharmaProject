@@ -1,0 +1,36 @@
+{% extends 'main/core/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% crispy form form.helper %}
+
+{% block content %}
+<div class="form-box">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="form-card">
+                <h2 class="text-center textDesign">Register</h2>
+                <p class="text-center" style="color: #bcbcbc;">Create your account. It's free and only takes a minute.</p>
+                <br>
+                <form method="POST" novalidate>
+                    {% csrf_token %}
+                    {% crispy form %}
+                </form>
+                <br>
+                <hr>
+            <div class="row text-center">
+                <div class="col-md-12">
+                  <p>Already have an account? <a href="/login/">Sign in</a> </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    </div>
+</div>
+
+{{formData}}
+{% endblock %}

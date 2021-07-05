@@ -1,0 +1,39 @@
+/* navbar style */
+.nav-link{
+    color: white !important;
+}
+
+
+.dropdown-item, .dropdown-item:hover{
+    color: darkgreen !important;
+}
+
+.navbar {
+    background-color: #003695;
+}
+nav{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 10px 30px rgba(0,0,0,0.08);
+    z-index: 1000000;
+}
+
+/* end navbar style */
+
+
+/* form style */
+.form-card{
+    background-color: #f2f3f7;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
+    padding: 30px;
+    margin: 80px 0 80px 0;
+    border-radius: 3px;
+}
+
+.form-box{
+    background-color: #63738a;
+}
+
+.textDesign{
+   color:  rgba(0,0,0,0.87)
+}
+
+/* end form style */

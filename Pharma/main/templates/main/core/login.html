@@ -1,0 +1,57 @@
+{% extends 'main/core/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% crispy form form.helper %}
+
+{% block content %}
+<div class="form-box">
+    <div class="container-fluid">
+
+        <div class="row" style="height: 95vh;">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="form-card">
+                    <h2 class="text-center textDesign">Login</h2>
+                    <p class="text-center" style="color: #bcbcbc;">Enter crendiatals to login</p>
+                    <br>
+                    <!-- messages  -->
+
+                    {% for message in messages %}
+                    <div class="container-fluid p-0">
+                        <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- msg end -->
+
+                    <form method="POST" novalidate>
+                        {% csrf_token %}
+                        {% crispy form %}
+                    </form>
+                    <br>
+                    <hr>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p>Don't have account? <a href="/registration/" class="pr-2">Sign Up</a> | <a href="#"
+                                    class="pl-2">Forget Password?</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</div>
+
+{{userLoginName}}
+{{userLoginPass}}
+{{msg}}
+{{userID.phone_number}}
+{{passw}}
+{% endblock %}
