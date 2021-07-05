@@ -1,5 +1,5 @@
 /* navbar style */
-.nav-link{
+/* .nav-link{
     color: white !important;
 }
 
@@ -14,10 +14,17 @@
 nav{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 10px 30px rgba(0,0,0,0.08);
     z-index: 1000000;
-}
+} */
 
 /* end navbar style */
 
+.aboutStyle{
+    padding: 70px 0 0 20px;
+}
+
+.contactStyle{
+    padding: 70px 0 0 20px;
+}
 
 /* form style */
 .form-card{

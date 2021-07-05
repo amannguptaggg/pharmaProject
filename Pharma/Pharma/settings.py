@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Pharma.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'pharma',
+        'NAME': 'pharmaProject',
     }
 }
 

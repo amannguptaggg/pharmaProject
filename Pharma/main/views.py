@@ -69,3 +69,11 @@ def login(request):
 
 
     return render(request,'main/core/login.html',context)
+
+
+
+def about(request):
+    return render(request,'main/general/about.html')
+
+def contact(request):
+    return render(request,'main/general/contact.html')
