@@ -1,0 +1,43 @@
+{% extends 'main/core/base.html' %}
+{% load static %}
+
+{% block content  %}
+<section id="coursesSection">
+    <div class="courseFilter">
+        <h2>Filters</h2>
+    </div>
+    <div class="courseList">
+        <h2>Courses Items</h2>
+
+
+    
+
+          <div class="card-deck">
+            
+            <div class="card" style="max-width: 20rem;">
+              <img class="card-img-top" src="{% static 'main/images/diabetes.jpg'%}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Introduction to Diabetes</h5>
+                <p class="card-text">This  Certificate Course in Diabetes Mellitus – Edition II has been designed by leading diabetologists to cover the clinical features, screening and diagnosis, and a basic introduction to the pharmacological agents used in the treatment of diabetes.</p>
+                <p class="card-text"><small class="text-muted">Duration : 4 Months</small></p>
+              </div>
+            </div>
+
+
+            
+            <div class="card" style="max-width: 20rem;">
+                <img class="card-img-top" src="{% static 'main/images/diabetes.jpg'%}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+
+
+          </div>
+
+    </div>
+</section>
+{% endblock content  %}

@@ -1,0 +1,46 @@
+#coursesSection{
+    position: relative;
+    padding: 70px 0px 0px 0px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: row;
+}
+
+.courseFilter{
+    position: relative;
+    max-width: 16%;
+    background-color: teal;
+    width: 16%;
+}
+
+.courseList{
+    position: relative;
+    width: calc(100%-16%);
+    padding: 20px 20px;
+}
+
+@media only screen and (max-width: 982px){
+    #coursesSection{
+        flex-direction: column;
+    }
+
+    .courseFilter{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .courseList{
+        width: 100%;
+    }
+}
+
+.iconBookmark{
+    position: absolute !important;
+    left: 90% !important;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 1);
+}

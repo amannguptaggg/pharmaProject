@@ -4,7 +4,7 @@ from .forms import LoginForm, RegistrationForm
 from .models import Users
 from django.contrib import messages
 
-siteName = 'Pharmaa'
+siteName = 'PharmaEdu'
 
 def index(request):
     allUsers = Users.objects.all()
@@ -38,6 +38,7 @@ def login(request):
     msg = ''
     userID = ''
     passw = 'no'
+    loggedIn = False
 
     if request.method == 'POST' or None:
         loginForm = LoginForm(request.POST)
@@ -50,6 +51,7 @@ def login(request):
 
                 if (((userLoginId == userID.username) or (userLoginId == userID.email) or (userLoginId == userID.phone_number)) and (userLoginPassword == userID.password)):
                     messages.success(request,'Successfuly Logged In')
+                    loggedIn = True
                 else:
                     messages.error(request,'User Id or Password Incorrect')
             except:
@@ -64,6 +66,7 @@ def login(request):
         'userLoginPass':userLoginPassword,
         'userID':userID,
         'passw':passw,
+        'loggedIn' : loggedIn
         }
 
 
@@ -77,3 +80,6 @@ def about(request):
 
 def contact(request):
     return render(request,'main/general/contact.html')
+
+def courses(request):
+    return render(request,'main/general/courses.html')

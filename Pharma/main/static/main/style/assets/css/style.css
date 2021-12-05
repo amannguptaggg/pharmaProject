@@ -482,19 +482,19 @@ h1, h2, h3, h4, h5, h6 {
 
 @-webkit-keyframes up-down {
   0% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
 @keyframes up-down {
   0% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 

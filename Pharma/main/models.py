@@ -50,23 +50,21 @@ TOPHY = (
 
 YEAREXPERIENCE = (
     ('', 'Select Year of Experience'),
-    ('1', '1 Year'),
-    ('2', '2 Year'),
-    ('3', '3 Year'),
-    ('4', '4 Year'),
-    ('5', '4+ years'),
-    ('6', '10+ years'),
-    ('7','None')
+    ('1', '1-2 Years'),
+    ('2', '2-4 Years'),
+    ('3', '4-5 Years'),
+    ('4', '5+ Years'),
+    ('7','No Experience')
 )
 
 QUALIFICATION = (
     ('', 'Select Qualification'),
     ('1', 'B.Pharma'),
-    ('2', 'MBBS'),
-    ('3', 'B.Sc Biology'),
-    ('4', 'M.Sc Biology'),
-    ('5', 'M.Pharma'),
-    ('6','Other'),
+    ('2', 'D Pharma'),
+    ('3', 'M.Pharma'),
+    ('4', 'Pharm.D'),
+    ('5', ' Ph.D'),
+    ('6','Other(Medical Course)'),
     ('7','None')
 )
 

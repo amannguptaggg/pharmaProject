@@ -58,7 +58,7 @@ class RegistrationForm(forms.ModelForm):
 
     type_of_pharmacy = forms.ChoiceField(choices=TOPHY)
 
-    Current_Address_of_Pharmacy = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Enter Current Store Address', 'rows': '3'}),
+    Current_Address_of_Pharmacy = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Pharmacy Store Address (Optional)', 'rows': '3'}), required=False,
                                                   validators=[validators.MaxLengthValidator(120)])
 
     training_done_till_date = forms.DateField(widget=forms.widgets.DateInput(
@@ -131,13 +131,11 @@ class RegistrationForm(forms.ModelForm):
                 ),
                 Row(
                     HTML(
-                        '<span style="margin-left:5px">Upolad Any Government ID Proof (Adhar/PAN/Driving Licence)*</span>'),
-                    # Column('IdProof', css_class='form-group col-md-12 mb-0'),
+                        '<span style="margin-left:5px">Upolad Government ID Proof (Adhar/Pharma Licence No)*</span>'),
                     Column('IdProofNumber',
                            css_class='form-group col-md-12 mb-0'),
-                    css_class='form-row'
-                ),
-
+                    # Column('IdProof', css_class='form-group col-md-6 mb-0'),
+                    css_class='form-row'),
                 HTML("<br>"),
                 Fieldset('Education/Work Details',
                          HTML("<hr>"),
@@ -151,9 +149,11 @@ class RegistrationForm(forms.ModelForm):
                          Row(
                              Column('qualification',
                                     css_class='form-group col-md-6 mb-0'),
-                             Column('training_done_till_date',
-                                    css_class='form-group col-md-6 mb-0'),
-                             css_class='form-row'
+                             Column(PrependedText(
+                                 'training_done_till_date','Course End Date',
+                                    css_class='form-group col-md-6 mb-0')
+                             ),
+                            css_class='form-row'
                          ),
                          Row(
                              Column('Current_Address_of_Pharmacy',

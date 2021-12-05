@@ -4,14 +4,13 @@
 
 {% crispy form form.helper %}
 
-{% block content %}
+{% block content %} 
 <div class="form-box">
 <div class="container-fluid contactStyle">
-    <div class="row">
-        <div class="col-lg-2"></div>
+    <div class="row formBoxFields">
         <div class="col-lg-8 col-md-12 col-sm-12">
             <div class="form-card">
-                <h2 class="text-center textDesign">Register</h2>
+                <h2 class="text-center textDesignForm">Register</h2>
                 <p class="text-center" style="color: #bcbcbc;">Create your account. It's free and only takes a minute.</p>
                 <br>
                 <form method="POST" novalidate>
@@ -27,10 +26,7 @@
             </div>
             </div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
     </div>
 </div>
-
-{{formData}}
 {% endblock %}

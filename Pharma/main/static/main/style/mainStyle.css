@@ -1,22 +1,10 @@
-/* navbar style */
-/* .nav-link{
-    color: white !important;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
 }
 
-
-.dropdown-item, .dropdown-item:hover{
-    color: darkgreen !important;
-}
-
-.navbar {
-    background-color: #003695;
-}
-nav{
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 10px 30px rgba(0,0,0,0.08);
-    z-index: 1000000;
-} */
-
-/* end navbar style */
 
 .aboutStyle{
     padding: 70px 0 0 20px;
@@ -28,19 +16,52 @@ nav{
 
 /* form style */
 .form-card{
-    background-color: #f2f3f7;
+    background-color: rgba(0, 0, 0, 0.529);
     box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
     padding: 30px;
     margin: 80px 0 80px 0;
     border-radius: 3px;
+    color: #fff;
+    margin-left: 50px;
+}
+
+.formBoxFields{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
 }
 
 .form-box{
-    background-color: #63738a;
+    background: url("../images/registrationBG.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    height: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+
+.form-box-login{
+
+    background: url("../images/loginBG.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    height: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
 }
 
 .textDesign{
    color:  rgba(0,0,0,0.87)
+}
+
+.textDesignForm{
+    color: #fff;
 }
 
 /* end form style */
