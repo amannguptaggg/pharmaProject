@@ -60,7 +60,7 @@
           <li><a class="nav-link scrollto" href="/courses/">Courses</a></li>
           <li><a class="nav-link scrollto" href="/about/">About</a></li>
           <li><a class="nav-link scrollto" href="/contact/">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>  {% if loggedIn %} {{userID.username}} {% else %} Account {% endif %}  </span> <i class="bi bi-chevron-down"></i></a>
 
             {% if loggedIn %}
             <ul>
@@ -76,7 +76,9 @@
             </ul>
             {% endif %}
           </li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          {% if not loggedIn %}
+          <li><a class="getstarted" href="/registration/">Get Started</a></li>
+          {% endif %}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

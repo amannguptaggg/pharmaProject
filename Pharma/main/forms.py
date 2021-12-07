@@ -66,9 +66,9 @@ class RegistrationForm(forms.ModelForm):
 
     Work_experience = forms.ChoiceField(choices=YEAREXPERIENCE)
     qualification = forms.ChoiceField(choices=QUALIFICATION)
-    # IdProof = forms.FileField(widget=forms.FileInput(attrs={'type': 'file',
-    #                                                         'enctype':'multipart/form-data'
-    #                                                         }))
+    IdProof = forms.FileField(widget=forms.FileInput(attrs={'type': 'file',
+                                                            'enctype':'multipart/form-data'
+                                                            }))
 
     IdProofNumber = forms.CharField(widget=forms.TextInput(
         attrs={'placeholder': 'Proof Id Unique No'}))
@@ -134,7 +134,7 @@ class RegistrationForm(forms.ModelForm):
                         '<span style="margin-left:5px">Upolad Government ID Proof (Adhar/Pharma Licence No)*</span>'),
                     Column('IdProofNumber',
                            css_class='form-group col-md-12 mb-0'),
-                    # Column('IdProof', css_class='form-group col-md-6 mb-0'),
+                    Column('IdProof', css_class='form-group col-md-12 mb-0'),
                     css_class='form-row'),
                 HTML("<br>"),
                 Fieldset('Education/Work Details',
