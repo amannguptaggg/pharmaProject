@@ -60,14 +60,14 @@
           <li><a class="nav-link scrollto" href="/courses/">Courses</a></li>
           <li><a class="nav-link scrollto" href="/about/">About</a></li>
           <li><a class="nav-link scrollto" href="/contact/">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>  {% if loggedIn %} {{userID.username}} {% else %} Account {% endif %}  </span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>  {% if username %} {{userID.username}} {% else %} Account {% endif %}  </span> <i class="bi bi-chevron-down"></i></a>
 
-            {% if loggedIn %}
+            {% if username %}
             <ul>
               <li><a href="/index/">Dashboard</a></li>
               <li><a href="/index/">My Courses</a></li>
               <li><a href="/index/">Accomplishment</a></li>
-              <li><a href="/index/">Logout</a></li>
+              <li><a href="/logout/">Logout</a></li>
             </ul>
             {% else %}
             <ul>
@@ -76,7 +76,7 @@
             </ul>
             {% endif %}
           </li>
-          {% if not loggedIn %}
+          {% if username is None %}
           <li><a class="getstarted" href="/registration/">Get Started</a></li>
           {% endif %}
         </ul>
@@ -86,11 +86,7 @@
     </div>
   </header><!-- End Header -->
 
-
-
-
-
-
+  
   <!-- End  navigation menu -->
 
   {%  block content  %}

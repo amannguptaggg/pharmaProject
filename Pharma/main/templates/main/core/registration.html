@@ -13,6 +13,16 @@
                 <h2 class="text-center textDesignForm">Register</h2>
                 <p class="text-center" style="color: #bcbcbc;">Create your account. It's free and only takes a minute.</p>
                 <br>
+                {% for message in messages %}
+                <div class="container-fluid p-0">
+                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{ message }}
+                    </div>
+                </div>
+                {% endfor %}
                 <form method="POST" novalidate>
                     {% csrf_token %}
                     {% crispy form %}
@@ -22,6 +32,7 @@
             <div class="row text-center">
                 <div class="col-md-12">
                   <p>Already have an account? <a href="/login/">Sign in</a> </p>
+                  <p>{{formD}}</p>
                 </div>
             </div>
             </div>
